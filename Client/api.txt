@@ -1,0 +1,274 @@
+login and signup
+
+api: clinic login
+url: api/clinic/login
+type: POST
+body: {
+    username: String,
+    password: String
+}
+response: success/error
+
+api: clinic signup
+url: api/clinic/signup
+type: POST
+body:{
+    username: String,
+    password: String,
+    clinicname: String,
+    email: String,
+    phone: String,
+    Address: String,
+    city: String,
+    State: String,
+    pin: String,
+}
+response: success/error
+
+--------------------------------------
+
+patients
+
+api: add new patient
+url: api/patient/new
+type: POST
+body: {
+    firstname: String,
+    lastname: String,
+    phone: String,
+    email: String,
+    age: Number,
+    gender: Number,
+    bloodgroup: Number,
+    weight: Number,
+    Address: String, //
+    city: String, // Not useful as of now
+    State: String, //
+    pin: String, //
+}
+response: success/error
+
+api: get patient by id
+url: api/patient?id=_id
+type: GET
+body: NA
+response:{
+    firstname: String,
+    lastname: String,
+    phone: String,
+    email: String,
+    age: Number,
+    gender: Number,
+    bloodgroup: Number,
+    weight: Number,
+    Address: String, //
+    city: String, // Not useful as of now
+    State: String, //
+    pin: String, //
+    patienthistory:[
+        {
+            date: date,
+            clinicianid: String,
+            clinicianname: String,
+            symptoms: [String],
+            diagnosis: String,
+            severity: Number,
+            reportid: String
+        }
+    ]
+}
+
+api: search patients with query
+url: api/patient/filter?minage=_minage&&maxage=_maxage&&gender=_gender&&diagnosis==_diagnosis&&namestring=_namestring
+type: GET
+body: NA
+respose:[{
+    patientid:String,
+    patientname:String,
+    diagnosis:String,
+},...]
+
+
+
+--------------------------------------
+
+clinicians
+
+api: add new clinician
+url: api/clinician/new
+type: POST
+body: {
+    firstname: String,
+    lastname: String,
+    phone: String,
+    email: String,
+    role: String,
+    age: Number,
+    gender: Number,
+    Address: String, //
+    city: String, // Not useful as of now
+    State: String, //
+    pin: String, //
+}
+response: success/error
+
+api: get clinician by id
+url: api/clinician?id=_id
+type: GET
+body: NA
+response:{
+    firstname: String,
+    lastname: String,
+    phone: String,
+    email: String,
+    role: String,
+    age: Number,
+    gender: Number,
+    Address: String, //
+    city: String, // Not useful as of now
+    State: String, //
+    pin: String, //
+    patients:[
+        {
+            patientid: String,
+            patientname: String,
+            diagnosis: String,
+            severity: Number
+        },...
+    ]
+}
+
+--------------------------------------
+
+audio files
+
+api: upload audio segments
+url: api/analysis/predict
+type: POST
+body:{
+    [
+        {
+            segmentname:String
+            signaldata:[Number],
+            samplingrate: Number,
+        },...
+    ]
+}
+response:{
+    [
+        {
+            segmentname: String
+            abnormality:{
+                crackle: Number,
+                wheeze: Number,
+                none: Number
+            },
+            diagnosis:{
+                copd: Number,
+                asthma: Number,
+                pneumonia: Number,
+                healthy: Number,
+                bron: Number
+            },
+            severity: Number
+        },...
+    ]
+}
+
+api: save annotated audio
+url: api/analysis/store
+type: POST
+body:{
+    clinicid:String,
+    clinicianid:String,
+    patientid:String,
+    audiodata:[
+        {
+            segmentname: String
+            abnormality:{
+                crackle: Number,
+                wheeze: Number,
+                none: Number
+            },
+            diagnosis:{
+                copd: Number,
+                asthma: Number,
+                pneumonia: Number,
+                healthy: Number,
+                bron: Number
+            },
+            severity: Number,
+            symptoms:[String]
+        },...
+    ]
+}
+response: success/error
+
+--------------------------------------
+
+Visualization
+
+api: get probabilty bar graph
+url: api/visualization/probability
+type: POST
+body:{
+    [
+        {
+            abnormality:[
+                {
+                    classes:[String],
+                    probabilities:[Numbers],
+                }
+            ],
+            diagnosis:[
+                {
+                    classes:[String],
+                    probabilities:[Numbers],
+                }
+            ]
+        },...
+    ]    
+}
+response:{
+    abnormality:[files],
+    diagnosis:[files],
+}
+
+api: get audio visualization
+url: api/visualization/audio
+type: POST
+body:{
+    [
+        {
+            signaldata:[Number],
+            samplingrate:Number
+        },...
+    ]    
+}
+response:{
+    waveform:[files],
+    spectrogram:[files],
+}
+
+----------------------------------------------
+
+Report
+
+api: save Report
+url: api/reports/store
+type: POST
+body:{
+    clinicid: String,
+    patientid: String,
+    visitid: String,
+    report: file
+}
+response: success/error
+
+api: get Report
+url: api/reports?reportid=_reportid
+type: GET
+body: NA
+response: success/error
+
+----------------------------------------------
