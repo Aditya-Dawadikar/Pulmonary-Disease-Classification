@@ -83,6 +83,11 @@ Asthma
 - [Normal Breathing Sound](https://youtu.be/VtnMRG0ORLs?feature=shared)
 
 ## Resources
+#### Model:
+Download the model here
+[Tensorflow Saved Model](https://drive.google.com/file/d/1Xke8r07-jbsDyM8Jh418LhefxMTzU4UA/view?usp=sharing)
+
+Note: Access is restricted. Send an email request to [mail.aditya.dawadikar@gmail.com](mail.aditya.dawadikar@gmail.com) to get access.
 
 #### Presentation:
 - [Engineering Final Project Presentation](https://docs.google.com/presentation/d/15R2Iyz_M9i4dbqN_sUWLinD1h3o7cjtXT-Gp99novzo/edit?usp=sharing)
