@@ -97,7 +97,7 @@ Click on the Image or the Link below for demo
 [Demo Link](https://drive.google.com/file/d/1fIFL_JiWWNA0UfrlYhAA_KIp5FDaeK3-/view?usp=drive_link)
 [![Application View](https://github.com/Aditya-Dawadikar/Pulmonary-Disease-Classification/blob/main/Pulmonary%20Disease%20Classification%20App%20demo.png)](https://drive.google.com/file/d/1fIFL_JiWWNA0UfrlYhAA_KIp5FDaeK3-/view?usp=drive_link)
 #### Publications:
-- [Three Feature Based Ensemble Deep Learning Model for Pulmonary Disease Classification](https://d1wqtxts1xzle7.cloudfront.net/99695152/IRJET_V10I2102-libre.pdf?1678512429=&response-content-disposition=inline%3B+filename%3DThree_Feature_Based_Ensemble_Deep_Learni.pdf&Expires=1739318525&Signature=UoGpWP6CeD3tnRXG4W8H9VTOI0h9VBzU94hrYGtMa~DLzovgQ2C0Nh-vzkENK4nt8-Sbic39dzCw540AWSi0AiVKByvJW4TNeJFwwFRzFxscd8CARTRO-M31afoypt7E32xuCbukDSM3x3LeEKEBedRy0TfY4iJvk9aRo4E9ZI4h1S8AdVXJfuLqsA~ZqtjRHiHwXAMjMsxVwi2onhKx9eztZFoH0x48eW0U17ZYIMcwFnkY4~HC8p8f5PZxnWo2Nuj71pLCQCI1mRInahvTjGbFBxIghGEJbgD5GGmqd-1MpqUO0tfHaAc6Mn7qRRAoNSnv9SCmX3MRhX-0IUxRwQ__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
+- [Three Feature Based Ensemble Deep Learning Model for Pulmonary Disease Classification](https://www.irjet.net/volume10-issue02)
 - [Survey of Techniques for Pulmonary Disease Classification using Deep Learning](https://ieeexplore.ieee.org/abstract/document/9824879)
 
 #### References
